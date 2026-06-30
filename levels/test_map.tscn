@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://cqe2mcp12pu2e"]
 
-[ext_resource type="Script" uid="uid://cp5efe7orlpbb" path="res://materials/pixelate/pixelate_compositor_effect.gd" id="1_772xm"]
 [ext_resource type="PackedScene" uid="uid://cw505c1igloni" path="res://utils/fps_counter.tscn" id="2_6eklp"]
 [ext_resource type="PackedScene" uid="uid://c8gul3bc0gbej" path="res://core/player/player.tscn" id="2_ask3y"]
 
@@ -16,18 +15,7 @@ background_mode = 2
 sky = SubResource("Sky_772xm")
 glow_enabled = true
 
-[sub_resource type="CompositorEffect" id="CompositorEffect_63wim"]
-resource_local_to_scene = false
-resource_name = ""
-enabled = false
-effect_callback_type = 4
-needs_motion_vectors = false
-needs_normal_roughness = false
-script = ExtResource("1_772xm")
-metadata/_custom_type_script = "uid://cp5efe7orlpbb"
-
 [sub_resource type="Compositor" id="Compositor_tax74"]
-compositor_effects = Array[CompositorEffect]([SubResource("CompositorEffect_63wim")])
 
 [sub_resource type="BoxMesh" id="BoxMesh_ehwo5"]
 
