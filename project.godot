@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Mouse"
-run/main_scene="uid://cqe2mcp12pu2e"
+run/main_scene="uid://bquvsye0td0fk"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Steamworks="*uid://c7jgi42t8a2gf"
+Networking="*uid://eqtjg5r537aw"
 
 [display]
 
@@ -66,4 +66,6 @@ initialization/app_data/playtest_id=0
 initialization/app_data/tool_id=0
 initialization/processes/embed_callbacks=false
 multiplayer_peer/max_channels=4
-initialization/processes/initialize_on_startup=true
+initialization/app_id=480
+initialization/initialize_on_startup=true
+initialization/embed_callbacks=false
