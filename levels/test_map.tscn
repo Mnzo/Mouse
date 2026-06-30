@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cp5efe7orlpbb" path="res://materials/pixelate/pixelate_compositor_effect.gd" id="1_772xm"]
 [ext_resource type="PackedScene" uid="uid://cw505c1igloni" path="res://utils/fps_counter.tscn" id="2_6eklp"]
+[ext_resource type="PackedScene" uid="uid://c8gul3bc0gbej" path="res://core/player/player.tscn" id="2_ask3y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_63wim"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -28,6 +29,16 @@ metadata/_custom_type_script = "uid://cp5efe7orlpbb"
 [sub_resource type="Compositor" id="Compositor_tax74"]
 compositor_effects = Array[CompositorEffect]([SubResource("CompositorEffect_63wim")])
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ask3y"]
+albedo_color = Color(0.25895518, 0.25895518, 0.25895515, 1)
+metallic_specular = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tax74"]
+material = SubResource("StandardMaterial3D_ask3y")
+size = Vector2(20000, 20000)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ehwo5"]
+
 [node name="TestMap" type="Node" unique_id=91092381]
 
 [node name="Systems" type="Node" parent="." unique_id=119019895]
@@ -44,7 +55,16 @@ shadow_enabled = true
 environment = SubResource("Environment_6eklp")
 compositor = SubResource("Compositor_tax74")
 
+[node name="Floor" type="MeshInstance3D" parent="World/Environment" unique_id=1328284848]
+mesh = SubResource("PlaneMesh_tax74")
+
+[node name="Box1" type="MeshInstance3D" parent="World/Environment" unique_id=1164961004]
+mesh = SubResource("BoxMesh_ehwo5")
+
 [node name="Entities" type="Node3D" parent="World" unique_id=1895926151]
+
+[node name="Player" parent="World/Entities" unique_id=369326982 instance=ExtResource("2_ask3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3407142, 0)
 
 [node name="Ingredients" type="Node3D" parent="World" unique_id=1347943923]
 
