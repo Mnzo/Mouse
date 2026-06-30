@@ -52,3 +52,13 @@ textures/vram_compression/import_etc2_astc=true
 anti_aliasing/quality/msaa_2d=1
 anti_aliasing/quality/msaa_3d=1
 anti_aliasing/quality/screen_space_aa=1
+
+[steam]
+
+initialization/app_data/app_type=0
+initialization/app_data/app_id=480
+initialization/app_data/demo_id=0
+initialization/app_data/playtest_id=0
+initialization/app_data/tool_id=0
+initialization/processes/embed_callbacks=false
+multiplayer_peer/max_channels=4
